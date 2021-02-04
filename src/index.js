@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 import './index.css';
 import App from './App';
 import {store} from './redux/store.js'
+import "tailwindcss/tailwind.css"
 
 ReactDOM.render(
   <Provider store={store}>
