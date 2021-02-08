@@ -1,6 +1,6 @@
 import React from 'react';
-import InputContainer from '../InputContainer/InputContainer'
-import StyleModeCheckbox from '../StyleModeCheckbox/StyleModeCheckbox'
+import InputContainer from '../InputContainer/InputContainer';
+import StyleModeCheckbox from '../StyleModeCheckbox/StyleModeCheckbox';
 
 
 function MaineItem() {
@@ -13,6 +13,6 @@ function MaineItem() {
       </div>
     </>
   );
-}
+};
 
 export default MaineItem;

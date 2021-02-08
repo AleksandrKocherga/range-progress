@@ -1,5 +1,5 @@
 import React from 'react';
-import MaineItem from './components/MainItem/MaineItem'
+import MaineItem from './components/MainItem/MaineItem';
 
 function App() {
   return (

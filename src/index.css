@@ -3,7 +3,6 @@
 @import "tailwindcss/utilities";
 
 /* Switch */
-
 input[type="checkbox"].switch {
   margin-right: 20px;
   -webkit-appearance: none;
@@ -56,7 +55,7 @@ input[type="checkbox"].switch:checked:after {
 }
 
 
-/* Range  */
+/* Range */
 .slider {
   -webkit-appearance: none;
   border-radius: 5px;

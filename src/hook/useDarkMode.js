@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
 export function useDarkMode() {
   const [theme, setTheme] = useState('light')
@@ -12,4 +12,4 @@ export function useDarkMode() {
   }, [theme, colorTheme]);
 
   return [colorTheme, setTheme];
-}
+};

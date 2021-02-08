@@ -1,6 +1,6 @@
 import React from 'react';
-import Input from '../Input/Input'
-import Range from '../Range/Range'
+import Input from '../Input/Input';
+import Range from '../Range/Range';
 
 function InputContainer() {
   return (
@@ -13,6 +13,6 @@ function InputContainer() {
 
     </>
   );
-}
+};
 
 export default InputContainer;

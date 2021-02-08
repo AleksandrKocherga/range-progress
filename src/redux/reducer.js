@@ -1,4 +1,4 @@
-import {ADD_VALUE, ADD_INPUT_VALUE} from './actionTypes.js'
+import {ADD_VALUE, ADD_INPUT_VALUE} from './actionTypes.js';
 
 export function reducer ( state = {value : '0', inputValue : '0'}, action){
   switch(action.type){
@@ -9,4 +9,4 @@ export function reducer ( state = {value : '0', inputValue : '0'}, action){
      default : 
       return state
   }
-}
+};

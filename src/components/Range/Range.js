@@ -1,11 +1,15 @@
 import React, { useRef, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
-import { ADD_VALUE } from '../../redux/actionTypes.js'
+import { useDispatch, useSelector } from 'react-redux';
+import { ADD_VALUE } from '../../redux/actionTypes.js';
 
 function Range() {
-  const rangeValue = useRef(null)
-  const dispatch = useDispatch()
-  const { inputValue } = useSelector(store => store)
+  const rangeValue = useRef(null);
+  const dispatch = useDispatch();
+  const { inputValue } = useSelector(store => store);
+
+  function inputHandler(event) {
+    return dispatch({ type: ADD_VALUE, payload: event.target.value })
+  };
 
   function validNumber(input, rangeValue) {
     let current = parseFloat(input)
@@ -16,15 +20,15 @@ function Range() {
     } else {
       return rangeValue.current.value = min
     }
-  }
+  };
 
   useEffect(() => {
     validNumber(inputValue, rangeValue)
-  }, [rangeValue, inputValue])
+  }, [rangeValue, inputValue]);
 
   return (
     <>
-      <input ref={rangeValue} type="range" min="0" max="100" step="0.01" className="slider z-10 border-range-border dark:border-white" onChange={event => dispatch({ type: ADD_VALUE, payload: event.target.value })} list="number" />
+      <input ref={rangeValue} type="range" min="0" max="100" step="0.01" className="slider z-10 border-range-border dark:border-white" onChange={inputHandler} list="number" />
       <datalist id="number">
         <option value="0" />
         <option value="25" />
@@ -42,6 +46,6 @@ function Range() {
 
     </>
   );
-}
+};
 
 export default Range;
